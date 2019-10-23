@@ -1,18 +1,18 @@
 <template>
-        <div class="grid-thing">
-            <p>{{vlaai.naam}}</p>
+        <div v-bind:class="{'print': print_friendly}" class="grid-thing">
+            <p id="naam">{{vlaai.naam}}</p>
             <p id="total">{{vlaai.winkel + vlaai.klant}}</p>
-            <button v-on:click="plusKlant"><font-awesome-icon icon="user-plus" size="2x" /></button>
-            <button v-on:click="plusWinkel"><font-awesome-icon icon="store" size="2x" /></button>
-            <p v-on:click="minKlant">{{vlaai.klant}}</p>  
-            <p v-on:click="minWinkel">{{vlaai.winkel}}</p>
+            <button v-bind:class="{'hidden': print_friendly}" v-on:click="plusKlant"><font-awesome-icon icon="user-plus" size="2x" /></button>
+            <button v-bind:class="{'hidden': print_friendly}" v-on:click="plusWinkel"><font-awesome-icon icon="store" size="2x" /></button>
+            <p class="clickable" v-on:click="minKlant">{{vlaai.klant}}</p>  
+            <p class="clickable" v-on:click="minWinkel">{{vlaai.winkel}}</p>
         </div>
 </template>
 
 <script>
 export default {
     name: "Vlaai",
-    props: ["vlaai"],
+    props: ["vlaai", "print_friendly"],
     methods: {
         plusWinkel() {
             this.vlaai.winkel = this.vlaai.winkel + 1;
@@ -34,6 +34,14 @@ export default {
 </script>
 
 <style scoped>
+#naam {
+    margin-left:0 !important;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
 .grid-thing {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -71,5 +79,9 @@ p {
 
 #total {
     font-size:24px;
+}
+
+.hidden {
+    display: none;
 }
 </style>

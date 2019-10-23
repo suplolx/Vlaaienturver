@@ -112,6 +112,60 @@ export default {
           winkel: 0,
           klant: 0,
         },
+        {
+          id: 17,
+          naam: "Kersen speicaal",
+          winkel: 0,
+          klant: 0,
+        },
+        {
+          id: 18,
+          naam: "Abrikozen speciaal",
+          winkel: 0,
+          klant: 0,
+        },
+        {
+          id: 19,
+          naam: "Kruisbessen schuim",
+          winkel: 0,
+          klant: 0,
+        },
+        {
+          id:20,
+          naam: "Aardbeien (harde bodem)",
+          winkel: 0,
+          klant: 0,
+        },
+        {
+          id:21,
+          naam: "Abrikoos slagroom (harde bodem)",
+          winkel: 0,
+          klant: 0,
+        },
+        {
+          id:22,
+          naam: "Belgische room",
+          winkel: 0,
+          klant: 0,
+        },
+        {
+          id: 23,
+          naam: "Bienestisch",
+          winkel: 0,
+          klant: 0,
+        },
+        {
+          id: 24,
+          naam: "Rijstevlaai slagroom",
+          winkel: 0,
+          klant: 0,
+        },
+        {
+          id: 25,
+          naam: "Slagroomtaart",
+          winkel: 0,
+          klant: 0,
+        },
 
       ]
     }
