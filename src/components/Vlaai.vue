@@ -15,19 +15,19 @@ export default {
     props: ["vlaai", "print_friendly"],
     methods: {
         plusWinkel() {
-            this.vlaai.winkel = this.vlaai.winkel + 1;
+            this.vlaai.winkel++;
         },
 
         plusKlant() {
-            this.vlaai.klant = this.vlaai.klant + 1;
+            this.vlaai.klant++;
         },
 
         minWinkel() {
-            this.vlaai.winkel = this.vlaai.winkel - 1;
+            this.vlaai.winkel--;
         },
 
         minKlant() {
-            this.vlaai.klant = this.vlaai.klant - 1;
+            this.vlaai.klant--;
         },
     }
 }
