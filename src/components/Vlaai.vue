@@ -1,12 +1,12 @@
 <template>
-        <div v-bind:class="{'print': print_friendly}" class="grid-thing">
-            <p id="naam">{{vlaai.naam}}</p>
-            <p id="total">{{vlaai.winkel + vlaai.klant}}</p>
-            <button v-bind:class="{'hidden': print_friendly}" v-on:click="plusKlant"><font-awesome-icon icon="user-plus" size="2x" /></button>
-            <button v-bind:class="{'hidden': print_friendly}" v-on:click="plusWinkel"><font-awesome-icon icon="store" size="2x" /></button>
-            <p class="clickable" v-on:click="minKlant">{{vlaai.klant}}</p>  
-            <p class="clickable" v-on:click="minWinkel">{{vlaai.winkel}}</p>
-        </div>
+    <b-row class="vlaai-row">
+        <b-col><p id="naam">{{vlaai.naam}}</p></b-col>
+        <b-col><p id="total">{{vlaai.winkel + vlaai.klant}}</p></b-col>
+        <b-col v-bind:class="{'hidden': print_friendly}" ><b-button squared v-on:click="plusKlant"><font-awesome-icon icon="user-plus" size="2x" /></b-button></b-col>
+        <b-col v-bind:class="{'hidden': print_friendly}"><b-button squared v-on:click="plusWinkel"><font-awesome-icon icon="store" size="2x" /></b-button></b-col>
+        <b-col><p class="clickable" v-on:click="minKlant">{{vlaai.klant}}</p>  </b-col>
+        <b-col><p class="clickable" v-on:click="minWinkel">{{vlaai.winkel}}</p></b-col>
+    </b-row>
 </template>
 
 <script>
@@ -42,36 +42,6 @@ export default {
     cursor: pointer;
 }
 
-.grid-thing {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    padding:10px;
-    border-bottom: 1px solid #64184c;
-}
-
-button {
-    margin:auto;
-    background-color:#64184c;
-    color:white;
-    box-shadow: 0 4px rgb(202, 202, 202);
-}
-
-button:hover {
-    color:#64184c!important;
-    background-color:white!important;
-}
-
-button:focus {
-    color:white;
-    background-color:#5c2b4c;
-}
-
-button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 1px #666;
-  transform: translateY(4px);
-}
-
 p {
     margin:auto;
     font-size: 16px;
@@ -83,5 +53,19 @@ p {
 
 .hidden {
     display: none;
+}
+
+button {
+    background-color:#64184c;
+    margin:auto;
+}
+
+button:hover {
+    background-color:white;
+    color:#64184c
+}
+
+.vlaai-row {
+    margin-top:10px;
 }
 </style>
