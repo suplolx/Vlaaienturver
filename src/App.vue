@@ -183,7 +183,7 @@ export default {
         togglePrint () {
             this.print_friendly = !this.print_friendly;
         },
-    }
+  }
 }
 </script>
 

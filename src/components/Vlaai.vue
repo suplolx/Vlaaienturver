@@ -67,5 +67,7 @@ button:hover {
 
 .vlaai-row {
     margin-top:10px;
+    padding-top:10px;
+    border-top:#64184c 1px solid
 }
 </style>
