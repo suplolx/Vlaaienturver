@@ -51,6 +51,4 @@ h1 {
 button {
     margin-top:30px;
 }
-
-
 </style>
