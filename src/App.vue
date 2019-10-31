@@ -14,6 +14,7 @@
 <script>
 import Vlaaien from './components/Vlaaien'
 import Header from './components/Header'
+import uuid from 'uuid'
 
 export default {
   name: 'app',
@@ -26,155 +27,168 @@ export default {
       print_friendly: false,
       vlaaien: [
         {
-          id: 1,
+          id: uuid.v4(),
           naam: "Kersenvlaai",
           winkel: 0,
           klant: 0,
         },
         {
-          id: 2,
+          id: uuid.v4(),          
           naam: "Abrikozenvlaai",
           winkel: 0,
           klant: 0,
         },
         {
-          id: 3,
+          id: uuid.v4(),          
           naam: "Appelvlaai",
           winkel: 0,
           klant: 0,
         },
         {
-          id: 4,
+          id: uuid.v4(),          
           naam: "Appel krokant",
           winkel: 0,
           klant: 0,
         },
         {
-          id: 5,
+          id: uuid.v4(),          
           naam: "Appel toeslag",
           winkel: 0,
           klant: 0,
         },
         {
-          id: 6,
+          id: uuid.v4(),          
+          naam: "Appel knapkoek",
+          winkel: 0,
+          klant: 0,
+        },
+        {
+          id: uuid.v4(),          
           naam: "Weerter Appel",
           winkel: 0,
           klant: 0,
         },
         {
-          id: 7,
+          id: uuid.v4(),          
           naam: "Zwartepruimenvlaai",
           winkel: 0,
           klant: 0,
         },
         {
-          id: 8,
+          id: uuid.v4(),          
           naam: "Pudding kruimel",
           winkel: 0,
           klant: 0,
         },
         {
-          id: 9,
+          id: uuid.v4(),          
           naam: "Abrikoos kruimel",
           winkel: 0,
           klant: 0,
         },
         {
-          id: 10,
+          id: uuid.v4(),
           naam: "Kersen kruimel",
           winkel: 0,
           klant: 0,
         },
         {
-          id: 11,
+          id: uuid.v4(),
           naam: "Appel kruimel",
           winkel: 0,
           klant: 0,
         },
         {
-          id: 12,
+          id: uuid.v4(),
           naam: "Appeltaart",
           winkel: 0,
           klant: 0,
         },
         {
-          id: 13,
+          id: uuid.v4(),
           naam: "Linzen abrikoos",
           winkel: 0,
           klant: 0,
         },
         {
-          id: 14,
+          id: uuid.v4(),
           naam: "Linzen kersen",
           winkel: 0,
           klant: 0,
         },
         {
-          id: 15,
+          id: uuid.v4(),
           naam: "Linzen Appel",
           winkel: 0,
           klant: 0,
         },
         {
-          id:16,
+          id: uuid.v4(),
           naam: "Rijstevlaai",
           winkel: 0,
           klant: 0,
         },
         {
-          id: 17,
+          id: uuid.v4(),
           naam: "Kersen speicaal",
           winkel: 0,
           klant: 0,
         },
         {
-          id: 18,
+          id: uuid.v4(),
           naam: "Abrikozen speciaal",
           winkel: 0,
           klant: 0,
         },
         {
-          id: 19,
+          id: uuid.v4(),
           naam: "Kruisbessen schuim",
           winkel: 0,
           klant: 0,
         },
         {
-          id:20,
+          id:uuid.v4(),
           naam: "Aardbeien (harde bodem)",
           winkel: 0,
           klant: 0,
         },
         {
-          id:21,
+          id:uuid.v4(),
           naam: "Abrikoos slagroom (harde bodem)",
           winkel: 0,
           klant: 0,
         },
         {
-          id:22,
+          id:uuid.v4(),
           naam: "Belgische room",
           winkel: 0,
           klant: 0,
         },
         {
-          id: 23,
+          id: uuid.v4(),
           naam: "Bienestisch",
           winkel: 0,
           klant: 0,
         },
         {
-          id: 24,
+          id: uuid.v4(),
           naam: "Rijstevlaai slagroom",
           winkel: 0,
           klant: 0,
         },
         {
-          id: 25,
+          id: uuid.v4(),
           naam: "Slagroomtaart",
           winkel: 0,
           klant: 0,
         },
+        {
+          id: uuid.v4(),
+          naam: "Vlaaitje (klein)",
+          winkel: 0,
+          klant: 0,
+        },
+        
 
       ]
     }
