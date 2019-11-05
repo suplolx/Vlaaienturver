@@ -2,9 +2,9 @@
     <b-row class="vlaai-row">
         <b-col><p id="naam">{{vlaai.naam}}</p></b-col>
         <b-col><p id="total">{{vlaai.winkel + vlaai.klant}}</p></b-col>
-        <b-col v-bind:class="{'hidden': print_friendly}" ><b-button squared v-on:click="plusKlant"><font-awesome-icon icon="user-plus" size="2x" /></b-button></b-col>
+        <b-col v-bind:class="{'hidden': print_friendly}" ><b-button v-b-tooltip.right.hover title="Rechtermuisknop om halve toe te voegen" oncontextmenu="return false;" v-on:click.right="plusHalf" squared v-on:click="plusKlant"><font-awesome-icon icon="user-plus" size="2x" /></b-button></b-col>
         <b-col v-bind:class="{'hidden': print_friendly}"><b-button squared v-on:click="plusWinkel"><font-awesome-icon icon="store" size="2x" /></b-button></b-col>
-        <b-col><p class="clickable" v-on:click="minKlant">{{vlaai.klant}}</p>  </b-col>
+        <b-col><p oncontextmenu="return false;" @click.right="minHalf" class="clickable" v-on:click.left="minKlant">{{vlaai.klant}}</p>  </b-col>
         <b-col><p class="clickable" v-on:click="minWinkel">{{vlaai.winkel}}</p></b-col>
     </b-row>
 </template>
@@ -20,6 +20,14 @@ export default {
 
         plusKlant() {
             this.vlaai.klant++;
+        },
+
+        plusHalf() {
+            this.vlaai.klant = this.vlaai.klant + 0.5;
+        },
+
+        minHalf() {
+            this.vlaai.klant = this.vlaai.klant - 0.5;
         },
 
         minWinkel() {
